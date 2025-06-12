@@ -1,0 +1,72 @@
+strict: true
+site_name: "zizmor"
+site_description: Static analysis for GitHub Actions
+site_url: https://zizmor.sh/
+docs_dir: site
+site_dir: site_html
+dev_addr: "127.0.0.1:9001"
+repo_url: https://github.com/zizmorcore/zizmor.sh
+edit_uri: edit/main/site
+
+theme:
+  name: material
+  custom_dir: .overrides
+  logo: assets/rainbow.svg
+  favicon: assets/favicon48x48.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    annotation: material/arrow-right-circle
+    repo: fontawesome/brands/github
+
+extra:
+  home_cover_image: attachments/wizard-posting.png # This path starts at your root mkdocs directory.
+  home_tagline: "zizmor: static analysis for GitHub Actions"
+  home_description: |
+    This site is an example showcase for my "mkdocs-coverpage" repository.
+
+  # Gradient Color
+  home_gradient_hsla: hsla(160deg,47%,55%,1)
+
+  # Custom Homepage Button(s)
+  home_button1_name: Main Clicky # Comment this parameter out to remove the button.
+  home_button1_url: Folder1/ # This path starts at your root mkdocs directory.
+  home_button1_theme: md-button md-button--primary # Options: "md-button", "md-button md-button--primary"
+  home_button1_icon: people # Options: "people", "gear", "image"
+  home_button1_blurb: | # Short description of this button / section.
+    This joker navigates to the shadow wizard armory located in "/Folder1/index.md"
+
+  home_button2_name: Clicky 2 # Comment this parameter out to remove the button.
+  home_button2_url: Folder2/ # This path starts at your root mkdocs directory.
+  home_button2_theme: md-button # Options: "md-button", "md-button md-button--primary"
+  home_button2_icon: gear # Options: "people", "gear", "image"
+  home_button2_blurb: | # Short description of this button / section.
+    This goober navigates to some important thingies located in "/Folder2/index.md"
+
+  home_button3_name: Clicky 3 # Comment this parameter out to remove the button.
+  home_button3_url: Folder3/ # This path starts at your root mkdocs directory.
+  home_button3_theme: md-button # Options: "md-button", "md-button md-button--primary"
+  home_button3_icon: image # Options: "people", "gear", "image"
+  home_button3_blurb: | # Short description of this button / section.
+    This psycho navigates to an interesting table of stuff located in "/Folder3/index.md"
+
+copyright: "&copy; 2024 William Woodruff"
