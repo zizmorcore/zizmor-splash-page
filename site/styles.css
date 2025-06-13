@@ -279,18 +279,6 @@ nav {
     background-color: rgba(129, 140, 248, 0.1);
 }
 
-.btn-tertiary {
-    background-color: transparent;
-    color: var(--text-color);
-    border: none;
-}
-
-.btn-tertiary:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-    transform: translateY(-2px);
-}
-
 /* Features Section */
 .features {
     padding: 5rem 0;
@@ -352,6 +340,25 @@ code {
 [data-theme="dark"] code {
     background-color: #2d2d2d;
     color: #e0e0e0;
+}
+
+/* 404 Error Page Styles */
+.error-page {
+    text-align: center;
+}
+
+.error-page .hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-page .hero-text h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.error-page .hero-text p {
+    margin-bottom: 1rem;
 }
 
 /* Footer */
