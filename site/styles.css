@@ -222,7 +222,7 @@ nav {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.placeholder-image {
+.feature-image {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
@@ -340,25 +340,6 @@ code {
 [data-theme="dark"] code {
     background-color: #2d2d2d;
     color: #e0e0e0;
-}
-
-/* 404 Error Page Styles */
-.error-page {
-    text-align: center;
-}
-
-.error-page .hero-text {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.error-page .hero-text h1 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-.error-page .hero-text p {
-    margin-bottom: 1rem;
 }
 
 /* Footer */
