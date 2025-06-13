@@ -1,4 +1,4 @@
-# zizmor.sh
+# zizmor-splash-page
 
 This repository provides a basic splash/landing page for [zizmor.sh].
 
