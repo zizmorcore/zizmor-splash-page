@@ -47,11 +47,13 @@ body {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -118,7 +120,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 nav {
@@ -165,7 +169,9 @@ nav {
     width: 20px;
     height: 20px;
     color: var(--text-primary);
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
 }
 
 [data-theme="dark"] .theme-toggle-icon {
@@ -228,7 +234,9 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 25px var(--shadow-color);
     background-color: var(--bg-secondary);
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 /* CTA Buttons */
@@ -332,14 +340,152 @@ code {
     color: var(--text-primary);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
-    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-family:
+        "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+        "Courier New", monospace;
     font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 [data-theme="dark"] code {
     background-color: #2d2d2d;
     color: #e0e0e0;
+}
+
+/* Used By Section */
+.used-by {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .used-by {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.used-by h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 120px;
+    background-color: var(--bg-color);
+}
+
+.carousel-container::before,
+.carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    width: calc(42 * (160px + 0.25rem));
+    animation: scrollLeft 60s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        animation-duration: 120s;
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-14 * (160px + 0.25rem)));
+    }
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    width: 160px;
+    height: 80px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.logo-item:hover {
+    transform: translateY(-2px);
+}
+
+.logo-placeholder {
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: block;
+    border-radius: 6px;
+    background-color: white;
+    padding: 4px;
+}
+
+.logo-item:hover .logo-placeholder {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+[data-theme="dark"] .logo-placeholder {
+    opacity: 0.9;
+    background-color: white;
+}
+
+/* Carousel disclaimer */
+.carousel-disclaimer {
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 1.5rem;
+    font-style: italic;
+    opacity: 0.8;
 }
 
 /* Footer */
@@ -353,7 +499,9 @@ footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
     padding: 2rem 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
     margin-top: auto;
     /* Pushes the footer to the bottom */
 }
@@ -387,7 +535,9 @@ footer .container {
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.8;
-    transition: opacity 0.2s, color 0.3s ease;
+    transition:
+        opacity 0.2s,
+        color 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -406,7 +556,9 @@ footer .container {
     justify-content: center;
     color: var(--footer-text);
     opacity: 0.8;
-    transition: all 0.2s ease, color 0.3s ease;
+    transition:
+        all 0.2s ease,
+        color 0.3s ease;
 }
 
 .social-icon svg {
@@ -422,7 +574,6 @@ footer .container {
 
 /* Responsive Design */
 @media (max-width: 900px) {
-
     .hero-content,
     .feature-item,
     .feature-item.reversed {
@@ -467,5 +618,33 @@ footer .container {
 
     .social-links {
         justify-content: center;
+    }
+
+    .used-by {
+        padding: 3rem 0;
+    }
+
+    .used-by h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .carousel-container {
+        height: 100px;
+    }
+
+    .carousel-track {
+        gap: 0.25rem;
+    }
+
+    .logo-item {
+        width: 140px;
+        height: 70px;
+        padding: 0.5rem;
+    }
+
+    .logo-placeholder {
+        max-width: 100px;
+        max-height: 50px;
     }
 }
